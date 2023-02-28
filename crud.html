@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post CRUD</title>
+    <script src="./node_modules/dompurify/dist/purify.js"></script>
+</head>
+
+<body>
+
+    <main class="main-crud">
+        <section class="sample-post">
+            <h3>List of Posts</h3>
+            <ul class="sample-posts">
+            </ul>
+        </section>
+
+        <Button class="add-button">Add Post</Button>
+
+
+        <dialog class="add-dialog">
+            <form method="dialog">
+                <label for="title">Post Title</label>
+                <input type="text" id="add-title" name="title">
+                <br>
+                <label for="date">Post Date</label>
+                <input type="date" id="add-date" name="date">
+                <br>
+                <label for="summary">Post Summary</label>
+                <input type="text" id="add-summary" name="summary">
+                <br>
+                <button class="save-add-button">Save Adding</button>
+                <button>Cancel Adding</button>
+            </form>
+        </dialog>
+
+        <dialog class="edit-dialog">
+            <form method="dialog">
+                <label for="title">Post Title</label>
+                <input type="text" id="edit-title" name="title">
+                <br>
+                <label for="date">Post Date</label>
+                <input type="date" id="edit-date" name="date">
+                <br>
+                <label for="summary">Post Summary</label>
+                <input type="text" id="edit-summary" name="summary">
+                <br>
+                <button class="edit-save-button">Save Editing</button>
+                <button>Cancel Editing</button>
+            </form>
+        </dialog>
+
+        <dialog class="delete-dialog">
+            <form method="dialog">
+                <h4>Delete Post?</h4>
+                <br>
+                <button class="deleteOkBtn">OK</button>
+                <button>Cancel Deleting</button>
+            </form>
+        </dialog>
+
+        <script type="module" src="./blog.js"></script>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./node_modules/dompurify/dist/purify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Dialogs ?</title>
+</head>
+
+<body>
+    <div class="native-diaglog">
+        <!-- create button -->
+        <button id="alert-button">Alert</button>
+        <br>
+        <br>
+        <button id="confirm-button">Confirm</button>
+        <output id="confirm-check"></output>
+        <br>
+        <br>
+        <button id="prompt-button">Prompt</button>
+        <output id="prompt-check"></output>
+        <br>
+        <br>
+        <button id="safer-prompt-button">Safer Prompt</button>
+        <output id="safer-prompt-check"></output>
+    </div>
+
+    <script>
+        const alertButton = document.getElementById("alert-button");
+        const confirmButton = document.getElementById("confirm-button");
+        const promptButton = document.getElementById("prompt-button");
+        const saferPromptButton = document.getElementById("safer-prompt-button");
+        const confirmOutput = document.getElementById("confirm-check");
+        const promptOutput = document.getElementById("prompt-check");
+        const saferPromptOutput = document.getElementById("safer-prompt-check");
+
+        // add alert function
+        alertButton.addEventListener('click', () => {
+            window.alert("Alert pressed!");
+        });
+
+        // add confirm function
+        confirmButton.addEventListener('click', () => {
+            const userConfirm = window.confirm("Do you confirm this?");
+            confirmOutput.textContent = "Confirm result: " + (userConfirm);
+        });
+
+        // add unsafe prompt function
+        promptButton.addEventListener('click', () => {
+            const userPrompt = window.prompt("What is your name?");
+            (userPrompt === null || userPrompt === "") ? promptOutput
+                .innerHTML = "User didn’t enter anything.": promptOutput
+                .innerHTML = "Promt result: " + (userPrompt);
+
+        });
+
+        // Safer safe prompt function
+        saferPromptButton.addEventListener('click', () => {
+            const userSaferPrompt = window.prompt("What is your name?");
+            let clean = DOMPurify.sanitize(userSaferPrompt);
+            (clean === null || clean === "") ? saferPromptOutput
+                .innerHTML = "User didn’t enter anything.": saferPromptOutput
+                .innerHTML = `Promt result: ${clean}`;
+        });
+    </script>
+</body>
+
+</html>

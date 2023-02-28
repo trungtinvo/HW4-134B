@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./node_modules/dompurify/dist/purify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Custom Dialogs ?</title>
+</head>
+
+<body>
+    <!-- create button -->
+    <div class="customDialog">
+        <button id="alert-button">Alert</button>
+        <br>
+        <br>
+        <button id="confirm-button">Confirm</button>
+        <output id="confirm-check"></output>
+        <br>
+        <br>
+        <button id="prompt-button">Prompt</button>
+        <output id="promt-check"></output>
+    </div>
+
+    <dialog id="alert-dialog" class="dialogBox">
+        <output id="alert-box">Alert Pressed!</output>
+        <button id="ok-alert-button">OK</button>
+    </dialog>
+
+    <dialog id="confirm-dialog" class="dialogBox">
+        <output id="confirm-box">Do you confirm this?</output>
+        <button id="cancel-confirm-button">Cancel</button>
+        <button id="ok-confirm-button">OK</button>
+    </dialog>
+
+    <dialog id="promt-dialog" class="dialogBox">
+        <p>What is your name?</p>
+        <input type="text" id="promptInput" placeholder="Enter your name">
+        <br>
+        <br>
+        <button id="cancel-prompt-button">Cancel</button>
+        <button id="ok-prompt-button">OK</button>
+    </dialog>
+
+    <script type="module" src="customdialog.js"></script>
+
+</body>
+
+</html>

@@ -463,3 +463,34 @@ footer {
   background-color: #022c43;
   color: white;
 }
+
+/* adding to part 5 hw4 */
+.send-button {
+  background-color: #022c43;
+  color: white;
+}
+
+.icon {
+  font-size: 2rem;
+}
+.icon:hover {
+  color: #dd650a;
+  font-size: 3rem;
+}
+.pro-pic:hover {
+  width: 550px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+h2 {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  padding: 30px;
+}

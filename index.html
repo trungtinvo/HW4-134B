@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
   <link rel="stylesheet" href="style.css">
   <title>Trung Tin Vo</title>
 </head>
@@ -16,10 +17,10 @@
     <span>Welcome To My Page</span>
     <hr>
     <nav class="navbar">
-      <div class="logo">
-        <img class="logo-sub" src="./image/logo_sub.png" alt="logo_sub">
+      <a class="logo" href="/">
+        <img class="logo-sub" src="./image/logo_sub.png" alt="logo-tonyvo">
         <img class="logo-t" src="./image/logo-t.png" alt="logo-t">
-      </div>
+      </a>
       <div class="menu">
         <a class="menu-link" href="index.html">Home</a>
         <a class="menu-link" href="#my-skills"> My Skills </a>
@@ -35,7 +36,7 @@
   <main>
     <section class="introduction" id="home">
       <aside class="portfolio-pic">
-        <img class="profile-pic" src="./image/portfolio.png" alt="portfolio-img" width="200" height="200" />
+        <img class="profile-pic" src="./image/portfolio.png" alt="portfolio-image" width="200" height="200" />
       </aside>
       <aside class="intro">
         <h1>I am Trung Tin Vo</h1>
@@ -111,7 +112,7 @@
         <div class="project1">
           <h3>Project 1</h3>
           <figure>
-            <img class="pro-pic" src="./image/project1.png" height="300" width="500" alt="project1-pic" />
+            <img class="pro-pic" src="./image/project1.png" height="300" width="500" alt="project1-picture" />
             <figcaption>
               <p>Android Mobile App</p>
             </figcaption>
@@ -125,7 +126,7 @@
         <div class="project2">
           <h3>Project 2</h3>
           <figure>
-            <img class="pro-pic" src="./image/project2.png" height="300" width="500" alt="project2-pic" />
+            <img class="pro-pic" src="./image/project2.png" height="300" width="500" alt="project2-picture" />
             <figcaption>
               <p>React Keeper App</p>
             </figcaption>
@@ -139,7 +140,7 @@
         <div class="project3">
           <h3>Project 3</h3>
           <figure>
-            <img class="pro-pic" src="./image/project3.png" height="300" width="500" alt="project3-pic" />
+            <img class="pro-pic" src="./image/project3.png" height="300" width="500" alt="project3-picture" />
             <figcaption>
               <p>Javasript Simon Game</p>
             </figcaption>
@@ -153,7 +154,7 @@
         <div class="project4">
           <h3>Project 4</h3>
           <figure>
-            <img class="pro-pic" src="./image/project4.png" height="300" width="500" alt="project4-pic" />
+            <img class="pro-pic" src="./image/project4.png" height="300" width="500" alt="project4-picture" />
             <figcaption>
               <p>Analytics Website</p>
             </figcaption>
@@ -174,9 +175,9 @@
             If you are looking for a programming or tennis partner, please
             send me an email. Let's say <code>print("Hello")</code> :)
             <br>
-            <a href="https://www.linkedin.com/in/tony-trung-tin-vo-96398b212/">LinkedIn</a>
-            <a href="https://github.com/trungtinvo">Github</a>
-            <a href="https://trung-tin-vo.netlify.app/">Portfolio</a>
+            <a href="https://www.linkedin.com/in/tony-trung-tin-vo-96398b212/"><i class="icon fa fa-linkedin"></i></a>
+            <a href="https://github.com/trungtinvo"><i class="icon fa fa-github"></i></a>
+            <a href="https://trung-tin-vo.netlify.app/"><i class="icon fa fa-suitcase"></i></a>
           </legend>
           <div class="contact-flex">
 
@@ -225,7 +226,7 @@
             </div>
             <div class="right-contact">
               <textarea name="message" placeholder="Message" required></textarea>
-              <button type="submit" formaction="mailto:votrungtin0992@gmail.com">
+              <button type="submit" formaction="mailto:votrungtin0992@gmail.com" class="send-button">
                 Send
               </button>
             </div>
